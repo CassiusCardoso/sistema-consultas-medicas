@@ -12,6 +12,6 @@ public interface PacienteRepository {
     Optional<Paciente> buscarPorId(UUID pacienteId);
     List<Paciente> buscarTodos();
     Optional<Paciente> buscarPorEmail(String email);
-    Optional<Paciente> buscarPorNome(String nome);
-    Optional<Paciente> buscarPorAtivo(StatusPaciente ativo);
+    List<Paciente> buscarPorNome(String nome);
+    List<Paciente> buscarPorStatus(StatusPaciente status);
 }
