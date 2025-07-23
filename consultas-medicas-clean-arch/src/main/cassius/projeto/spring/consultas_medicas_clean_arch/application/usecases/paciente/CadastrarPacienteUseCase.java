@@ -12,10 +12,14 @@ import cassius.projeto.spring.consultas_medicas_clean_arch.domain.valueobjects.C
 import cassius.projeto.spring.consultas_medicas_clean_arch.domain.valueobjects.Email;
 import cassius.projeto.spring.consultas_medicas_clean_arch.domain.valueobjects.Endereco;
 import cassius.projeto.spring.consultas_medicas_clean_arch.domain.valueobjects.Senha;
+import jakarta.transaction.Transactional;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@Service
+@Transactional
 public class CadastrarPacienteUseCase {
     private final PacienteRepository pacienteRepository;
     private final PacienteMapper mapper;
